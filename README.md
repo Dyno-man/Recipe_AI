@@ -12,3 +12,7 @@ This is a repository for generating recipes based off what's currently in your p
   https://huggingface.co/datasets/mbien/recipe_nlg
 
   *Need to pip install datasets*
+
+  ### PHI-3-Mini Model
+  We will be using the PHI-3-Mini model for the low powered computers we are using.
+  https://github.com/microsoft/Phi-3CookBook/blob/main/README.md
