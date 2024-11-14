@@ -10,3 +10,5 @@ This is a repository for generating recipes based off what's currently in your p
 
   ### Training Data
   https://huggingface.co/datasets/mbien/recipe_nlg
+
+  *Need to pip install datasets*
