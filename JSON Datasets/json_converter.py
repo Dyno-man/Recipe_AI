@@ -3,10 +3,10 @@ import json
 from gensim.parsing.preprocessing import remove_stopwords
 
 # How many recipes to load into json per chunk
-chunkSize = 100
+chunkSize = 10000
 
 # Whether to limit writing to a single chunk size
-limit = True
+limit = False
 
 # Specify your file paths
 csv_file_path = 'full_dataset.csv'
@@ -54,6 +54,7 @@ def csv_to_json(csv_file_path, json_file_path):
 
             # Check if chunk sized reach
             if counter % chunkSize == 0:
+                print(counter, " Converted")
                 with open(json_file_path, mode='a', encoding='utf-8') as json_file:
                     json.dump(recipes, json_file, indent=4)
                 recipes = []
