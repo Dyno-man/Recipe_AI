@@ -1,22 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import SearchBar from './SearchBar';
+import logo1 from './images/recipeAiLogo.webp'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img style={{width:"150px"}} src={logo1}/>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Welcome to EasyRecipeezy
         </p>
-        <a
+        {/* <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
+        <SearchBar/>
       </header>
     </div>
   );
