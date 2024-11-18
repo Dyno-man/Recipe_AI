@@ -21,7 +21,6 @@ function App() {
           Learn React
         </a> */}
         <SearchBar/>
-          <VoiceToText/>
       </header>
     </div>
   );

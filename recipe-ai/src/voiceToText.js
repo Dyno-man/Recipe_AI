@@ -1,40 +1,63 @@
-import React, { useEffect } from "react";
-import SpeechRecognition, {
-    useSpeechRecognition
-} from "react-speech-recognition";
+import React, {useEffect, useState} from "react";
+import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
+import PropTypes from "prop-types";
 
-const SpeechToText = () => {
+const SpeechToText = ({ onTranscriptChange }) => {
     const { transcript, resetTranscript } = useSpeechRecognition();
+    const [isListening, setIsListening] = useState(false);
+
+    // Handle form submission if needed
     const handleSubmit = (e) => {
         e.preventDefault();
         alert(e.target.text.value);
     };
-    useEffect(() => {
+
+    const handleStartListening = () => {
         SpeechRecognition.startListening({ continuous: true });
-        console.log("Now listening...");
-        return () => {
-            SpeechRecognition.stopListening();
-            console.log("Stopped Listening");
-        };
-    }, []);
+        setIsListening(true);
+    };
+
+    const handleStopListening = () => {
+        SpeechRecognition.stopListening();
+        setIsListening(false);
+    };
+
+    useEffect(() => {
+        // Whenever the transcript changes, pass it to the parent
+        if (onTranscriptChange) {
+            onTranscriptChange(transcript);
+        }
+    }, [transcript, onTranscriptChange]);
+
     if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
         alert("Browser does not support speech recognition");
     }
+
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <textarea name="text" rows={10} cols={50} value={transcript}></textarea>
-                <div className="btn-container">
-          <span onClick={resetTranscript} className="btn">
-            Clear Text
-          </span>
-                    <button type="submit" className="btn">
-                        Print Text
+            <div className="btn-container">
+                {!isListening ? (
+                    <button onClick={handleStartListening} className="btn">
+                        Start Listening
                     </button>
-                </div>
-            </form>
+                ) : (
+                    <button onClick={handleStopListening} className="btn">
+                        Stop Listening
+                    </button>
+                )}
+                <button onClick={resetTranscript} className="btn">
+                    Clear Text
+                </button>
+                <button onClick={handleSubmit} className="btn">
+                    Submit
+                </button>
+            </div>
         </div>
     );
+};
+
+SpeechToText.propTypes = {
+    onTranscriptChange: PropTypes.func.isRequired,
 };
 
 export default SpeechToText;
