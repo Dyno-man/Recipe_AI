@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 
-const SearchBar = () => {
+const SearchBar = ({ generateRecipe }) => {
     const [query, setQuery] = useState('');
     const { transcript } = useSpeechRecognition();
     const [isListening, setIsListening] = useState(false);
 
-    // Handle search logic
+    // Handle search logic by calling the generateRecipe function with the query
     const handleSearch = () => {
-        console.log("Searching for:", query);
+        console.log('Search button clicked');
+        if (generateRecipe) {
+            generateRecipe(query); // Call generateRecipe with the query
+        }
     };
 
     // Start listening to the voice input
@@ -25,8 +28,9 @@ const SearchBar = () => {
 
     // Update the query whenever the transcript changes
     useEffect(() => {
+        console.log("Transcript:", transcript);
         if (transcript) {
-            setQuery(transcript);
+            setQuery(transcript); // Update the query with the voice input
         }
     }, [transcript]);
 
