@@ -1,21 +1,20 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 
-const ParentComponent = () => {
-    // Define the generateRecipe function
+const App = () => {
+    // Define the generateRecipe function in the parent
     const generateRecipe = (query) => {
-        const generateRecipe = (query) => {
-            alert('This is a test pop-up!'); // Basic alert to check if it shows up
-        };
-
+        console.log("Generating recipe for:", query); // Example logic, replace with your actual logic
+        alert(`Generating recipe for: ${query}`);
     };
 
     return (
         <div>
             <h1>Recipe Generator</h1>
+            {/* Pass the generateRecipe function as a prop */}
             <SearchBar generateRecipe={generateRecipe} />
         </div>
     );
 };
 
-export default ParentComponent;
+export default App;

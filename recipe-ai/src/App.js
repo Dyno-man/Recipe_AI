@@ -5,6 +5,10 @@ import logo1 from './images/recipeAiLogo.webp'
 import VoiceToText from "./voiceToText";
 
 function App() {
+    const generateRecipe = (query) => {
+        console.log("Generating recipe for:", query); // Example logic, replace with your actual logic
+        alert(`Generating recipe for: ${query}`);
+    };
   return (
     <div className="App">
       <header className="App-header">
@@ -12,15 +16,10 @@ function App() {
         <p>
           Welcome to EasyRecipeezy
         </p>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-        <SearchBar/>
+          <div>
+              {/* Pass the generateRecipe function as a prop */}
+              <SearchBar generateRecipe={generateRecipe}/>
+          </div>
       </header>
     </div>
   );
