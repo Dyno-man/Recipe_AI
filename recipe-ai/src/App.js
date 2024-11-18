@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import SearchBar from './SearchBar';
 import logo1 from './images/recipeAiLogo.webp'
+import VoiceToText from "./voiceToText";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           Learn React
         </a> */}
         <SearchBar/>
+          <VoiceToText/>
       </header>
     </div>
   );
