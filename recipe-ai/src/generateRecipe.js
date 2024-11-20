@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 
-const App = () => {
+const generateRecipes = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [recipe, setRecipe] = useState(null);
@@ -48,4 +48,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default generateRecipes;
