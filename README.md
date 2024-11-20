@@ -1,10 +1,10 @@
 
 <a id="readme-top"></a>
 <div align="center">
-<h1 align="center">Eezy Recipeezy</h1>
+<h1 align="center">Eezy ReciPeezy</h1>
 
   <p align="center">
-    A dyanmic AI-powered recipe generator for variable ingredients and flavor profiles.
+    A dyanmic AI-powered recipe generator for variable ingredients and *flavor profiles.
   </p>
 
   <p align="center">
@@ -13,58 +13,55 @@
 </p>
 </div>
 
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about">About</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-      </ul>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#license">License</a></li>
-  </ol>
-</details>
+- [About](#about)
+- [Usage](#usage)
+- [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Dataset Parsing](#dataset-parsing)
+- [License](#license)
 
 
 
 <!-- ABOUT -->
 ## About
-Eezy Recipeezy is a dynamic AI powered recipe generator designed to give you the perfect recipe for your limited ingredients and taste profile.
+Eezy ReciPeezy is a dynamic AI powered recipe generator designed to give you the perfect recipe for your limited ingredients and *preferences.
 
+Powered by React and [SmolLM2](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct).
+
+ * [Recipe NLG](https://huggingface.co/datasets/mbien/recipe_nlg) dataset (filtered)
+ * [SmolLM2](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct) with 135 million parameters
+ * 78 hours of training (Further training in progress)
+
+*work in progress
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- INSTALLATION -->
-## Getting started
-
+## Usage
+Visit at [http://asteroidbelter.com/](http://asteroidbelter.com/) (Temporary domain name)
+## Getting Started
 ### Prerequisites
-
 1. Download [Python](https://www.python.org/downloads/)
 2. Install packages
    ```sh
    pip install gensim
+   pip install transformers
+   pip install --force-reinstall numpy==1.26.4
    ```
 
 ### Installation
-
 1. Clone/download the repo
    ```sh
    git clone https://github.com/Dyno-man/Recipe_AI.git
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Dataset Parsing
+Dataset used: [Recipe NLG](https://huggingface.co/datasets/mbien/recipe_nlg)
 
-<!-- USAGE -->
-## Usage
-`all_datasets.csv` should be located in the same folder as `json_convert.py`.
-Use `json_convert.py` to generate `.json` from `all_datasets.csv`. Modify `counter` if statement to change the number of recipes generated.
+Dataset is filtered for innapropriate recipes and parsed from .csv to .jsonl, Gensim required for stop-words when parsing.
+
+Dataset parser/filterer [json_converter.py](https://github.com/Dyno-man/Recipe_AI/blob/main/JSON%20Datasets/json_converter.py) usage described in comments.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
