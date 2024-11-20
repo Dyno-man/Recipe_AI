@@ -41,6 +41,13 @@ Powered by React and [SmolLM2](https://huggingface.co/HuggingFaceTB/SmolLM2-135M
 ## Usage
 Visit at [http://asteroidbelter.com/](http://asteroidbelter.com/) (Temporary domain name)
 ## Getting Started
+
+### Installation
+1. Clone/download the repo
+   ```sh
+   git clone https://github.com/Dyno-man/Recipe_AI.git
+   ```
+   
 ### Prerequisites
 1. Install packages
    ```sh
@@ -49,12 +56,6 @@ Visit at [http://asteroidbelter.com/](http://asteroidbelter.com/) (Temporary dom
    pip install --force-reinstall numpy==1.26.4
    npm install --save react-speech-recognition
    npm install
-   ```
-
-### Installation
-1. Clone/download the repo
-   ```sh
-   git clone https://github.com/Dyno-man/Recipe_AI.git
    ```
 
 ### Dataset Parsing
