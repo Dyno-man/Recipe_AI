@@ -47,6 +47,8 @@ Visit at [http://asteroidbelter.com/](http://asteroidbelter.com/) (Temporary dom
    pip install gensim
    pip install transformers
    pip install --force-reinstall numpy==1.26.4
+   npm install --save react-speech-recognition
+   npm install
    ```
 
 ### Installation
@@ -63,6 +65,13 @@ Dataset is filtered for innapropriate recipes and parsed from .csv to .jsonl, Ge
 Dataset parser/filterer [json_converter.py](https://github.com/Dyno-man/Recipe_AI/blob/main/JSON%20Datasets/json_converter.py) usage described in comments.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Text To Speech
+Was done using the SpeechRecognition package built into react
+
+Speech is saved as a transcript and printed into the search bar
+
+Speech does not currently delete after being turned off, so refresh to reset the transcript
 
 <!-- LICENSE -->
 ## License
