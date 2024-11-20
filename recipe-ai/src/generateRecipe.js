@@ -13,7 +13,7 @@ const App = () => {
         setRecipe(null);
 
         try {
-            const response = await fetch('http://localhost:5000/generate_recipe', {
+            const response = await fetch('http://localhost:5000/api/generate_recipe', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
