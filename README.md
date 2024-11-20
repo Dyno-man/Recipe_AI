@@ -19,6 +19,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
   * [Dataset Parsing](#dataset-parsing)
+  * [Text to speech](#text-to-speech)
 - [License](#license)
 
 
@@ -41,8 +42,7 @@ Powered by React and [SmolLM2](https://huggingface.co/HuggingFaceTB/SmolLM2-135M
 Visit at [http://asteroidbelter.com/](http://asteroidbelter.com/) (Temporary domain name)
 ## Getting Started
 ### Prerequisites
-1. Download [Python](https://www.python.org/downloads/)
-2. Install packages
+1. Install packages
    ```sh
    pip install gensim
    pip install transformers
@@ -69,9 +69,7 @@ Dataset parser/filterer [json_converter.py](https://github.com/Dyno-man/Recipe_A
 ### Text To Speech
 Was done using the SpeechRecognition package built into react
 
-Speech is saved as a transcript and printed into the search bar
-
-Speech does not currently delete after being turned off, so refresh to reset the transcript
+Speech is saved as a transcript and printed into the search bar. Speech does not currently delete after being turned off, so refresh to reset the transcript
 
 <!-- LICENSE -->
 ## License
