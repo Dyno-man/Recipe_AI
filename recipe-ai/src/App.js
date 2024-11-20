@@ -19,6 +19,7 @@ function App() {
           <div>
               {/* Pass the generateRecipe function as a prop */}
               <SearchBar generateRecipe={generateRecipe}/>
+                <GenerateRecipes/>
           </div>
       </header>
     </div>
