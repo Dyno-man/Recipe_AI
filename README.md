@@ -1,11 +1,15 @@
 
 <a id="readme-top"></a>
 <div align="center">
+  <p align="center">
+    <h3><a href="https://www.linkedin.com/posts/ksuccse_hackathon-kennesawstateuniversity-futureoftech-activity-7265479607808663552-jU07?utm_source=share&utm_medium=member_desktop">Won 2nd Place at Kennesaw State University's AI Club 2024 Hackathon</a></h3>
+  </p>
 <h1 align="center">Eezy ReciPeezy</h1>
 
   <p align="center">
-    A dyanmic AI-powered recipe generator for variable ingredients and *flavor profiles.
+    A dyanmic AI-powered recipe generator for variable ingredients
   </p>
+  
 
   <p align="center">
     
@@ -26,20 +30,19 @@
 
 <!-- ABOUT -->
 ## About
-Eezy ReciPeezy is a dynamic AI powered recipe generator designed to give you the perfect recipe for your limited ingredients and *preferences.
+Eezy ReciPeezy is a dynamic AI powered recipe generator designed to give you the perfect recipe for your limited ingredients *and preferences.
 
 Powered by React and [SmolLM2](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct).
 
  * [Recipe NLG](https://huggingface.co/datasets/mbien/recipe_nlg) dataset (filtered)
  * [SmolLM2](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct) with 135 million parameters
- * 78 hours of training (Further training in progress)
+ * 78 hours of training
 
-*work in progress
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- INSTALLATION -->
 ## Usage
-Visit at [http://asteroidbelter.com/](http://asteroidbelter.com/) (Temporary domain name)
+Visit at [http://asteroidbelter.com/](http://asteroidbelter.com/) (**AI is currently offline**)
 ## Getting Started
 
 ### Installation
